@@ -237,11 +237,6 @@ img {
 
         --btn: bold 12px/15px var(--ff);
     }
-
-    .footer-row {
-        flex-direction: column;
-        gap: 15px;
-    }
     
     .header {
         --h4: bold 20px/25px var(--ff);
@@ -250,8 +245,16 @@ img {
     .header-nav {
         gap: 15px;
     }
-    
+
+    .hero {
+        height: 500px;
+    }
     .hero-buttons {
+        gap: 15px;
+    }
+
+    .footer-row {
+        flex-direction: column;
         gap: 15px;
     }
 }
