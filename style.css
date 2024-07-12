@@ -73,6 +73,7 @@ h1 {
     text-transform: uppercase;
     font: var(--btn);
     color: var(--colour-text-500);
+    cursor: pointer;
 }
 
 body {
@@ -85,13 +86,28 @@ body > * {
     padding-inline: var(--page-side-padding);
 }
 
-.flex {
+.flex, a {
     display: flex;
-}
-
-.flex-column {
+} .flex-column {
     display: flex;
     flex-direction: column;
+}
+
+.btn-filled {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--colour-primary-500);
+} .btn-outline {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #5c27ce20;
+    border: 3px solid var(--colour-primary-500);
+    backdrop-filter: blur(20px);
+}
+
+img {
+    height: 100%;
+    width: 100%;
 }
 
 .hero {
@@ -104,32 +120,12 @@ body > * {
 .hero-stuff {
     max-width: 600px;
     gap: 25px;
-}
-
-.hero-text {
+} .hero-text {
     gap: 10px;
-}
-
-.hero-titles {
+} .hero-titles {
     gap: 0px;
-}
-
-.hero-buttons {
+} .hero-buttons {
     gap: 25px;
-}
-
-.btn-filled {
-    padding: 15px;
-    border-radius: 10px;
-    background-color: var(--colour-primary-500);
-}
-
-.btn-outline {
-    padding: 15px;
-    border-radius: 10px;
-    background-color: #5c27ce20;
-    border: 3px solid var(--colour-primary-500);
-    backdrop-filter: blur(20px);
 }
 
 .image-container {
@@ -140,18 +136,11 @@ body > * {
     transform: rotateY(20deg) rotateZ(-15deg) rotateX(25deg);
     right: -10%;
     z-index: -1;
-}
-
-.image-gradient {
+} .image-gradient {
     height: 100%;
     width: 100%;
     background-image: radial-gradient(#0f0f0f00 67%, var(--colour-background-400) 71%);
     position: absolute;
-}
-
-img {
-    height: 100%;
-    width: 100%;
 }
 
 .footer {
@@ -194,8 +183,10 @@ img {
     width: 24px;
 }
 
-.footer-links > * {
-    flex-basis: 100%;
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    row-gap: 50px;
 }
 .footer-links-column {
     gap: 35px;
@@ -208,7 +199,7 @@ img {
 }
 
 @media (width <= 1100px) {
-    body > * {
+    :root {
         --page-side-padding: 30px;
     }
 }
@@ -220,5 +211,15 @@ img {
     .image-container {
         width: 120%;
         right: -25%;
+    }
+}
+@media (width <= 450px) {
+    :root {
+        --page-side-padding: 15px;
+    }
+
+    .footer-row {
+        flex-direction: column;
+        gap: 15px;
     }
 }
