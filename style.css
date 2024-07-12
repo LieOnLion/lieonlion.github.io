@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    /* background colours */
+    --colour-background-500: #0b0b0b;
+    --colour-background-400: #0f0f0f;
+    --colour-background-300: #1e1e1e;
+    --colour-background-200: #212121;
+    --colour-background-100: #2e2e2e;
+
+    /* primary colours */
+    --colour-primary-500: #5c27ce;
+    /* --colour-primary-400: #0F0F0F; */
+    /* --colour-primary-300: #1E1E1E; */
+    /* --colour-primary-200: #1E1E1E; */
+    /* --colour-primary-100: #0B0B0B; */
+
+    /* text colours */
+    --colour-text-500: #ffffff;
+    --colour-text-400: #b9b9c3;
+    /* --colour-text-300: #1e1e1e; */
+    /* --colour-text-200: #212121; */
+    /* --colour-text-100: #2e2e2e; */
+
+    /* font stuff */
+    --ff: "Barlow", sans-serif;
+    --h1: bold 64px/75px var(--ff);
+    --h2: bold 48px/60px var(--ff);
+    --h3: bold 36px/45px var(--ff);
+    --h4: bold 24px/30px var(--ff);
+    --h5: bold 16px/20px var(--ff);
+    --lp: 24px/30px var(--ff);
+    --p: 16px/20px var(--ff);
+    --btn: bold 18px/24px var(--ff);
+
+    /* other stuff */
+    --border: 1px var(--colour-background-300) solid;
+    --page-side-padding: calc((100dvw - 1100px) / 2);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+h1 {
+    font: var(--h1);
+    color: var(--colour-text-500);
+} h2 {
+    font: var(--h2);
+    color: var(--colour-text-500);
+} h3 {
+    font: var(--h3);
+    color: var(--colour-text-500);
+} h4 {
+    font: var(--h4);
+    color: var(--colour-text-400);
+} h5 {
+    font: var(--h5);
+    color: var(--colour-text-400);
+} p {
+    font: var(--lp);
+    color: var(--colour-text-400);
+} .p {
+    font: var(--p);
+} a {
+    font: var(--p);
+    color: var(--colour-text-400);
+    text-decoration: none;
+} button {
+    text-transform: uppercase;
+    font: var(--btn);
+    color: var(--colour-text-500);
+}
+
+body {
+    background-color: var(--colour-background-400);
+    width: 100dvw;
+    min-height: 100dvh;
+}
+
+body > * {
+    padding-inline: var(--page-side-padding);
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero {
+    height: 700px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-stuff {
+    max-width: 600px;
+    gap: 25px;
+}
+
+.hero-text {
+    gap: 10px;
+}
+
+.hero-titles {
+    gap: 0px;
+}
+
+.hero-buttons {
+    gap: 25px;
+}
+
+.btn-filled {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--colour-primary-500);
+}
+
+.btn-outline {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #5c27ce20;
+    border: 3px solid var(--colour-primary-500);
+    backdrop-filter: blur(20px);
+}
+
+.image-container {
+    height: auto;
+    width: 70%;
+    position: absolute;
+    filter: blur(10px);
+    transform: rotateY(20deg) rotateZ(-15deg) rotateX(25deg);
+    right: -10%;
+    z-index: -1;
+}
+
+.image-gradient {
+    height: 100%;
+    width: 100%;
+    background-image: radial-gradient(#0f0f0f00 67%, var(--colour-background-400) 71%);
+    position: absolute;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.footer {
+    padding-block: 30px;
+    gap: 30px;
+    background-color: var(--colour-background-500);
+    border: var(--border);
+}
+
+.footer-row {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-line {
+    height: 1px;
+    margin-inline: 25px;
+    background-image: linear-gradient(to left, transparent 0%, var(--colour-background-300) 10%, var(--colour-background-300) 90%, transparent 100%);
+}
+
+.footer-logo {
+    align-items: center;
+    gap: 20px;
+}
+.footer-logo svg {
+    height: 32px;
+    width: 32px;
+}
+.footer-logo use {
+    fill: var(--colour-primary-500);
+    transform: scale(0.32);
+}
+
+.footer-socials {
+    gap: 15px;
+}
+.footer-socials svg {
+    height: 24px;
+    width: 24px;
+}
+
+.footer-links > * {
+    flex-basis: 100%;
+}
+.footer-links-column {
+    gap: 35px;
+}
+.footer-links-section {
+    gap: 15px;
+}
+.footer-links-list {
+    gap: 5px;
+}
+
+@media (width <= 1100px) {
+    body > * {
+        --page-side-padding: 30px;
+    }
+}
+@media (orientation: portrait) {
+    /* :root{
+
+    } */
+    
+    .image-container {
+        width: 120%;
+        right: -25%;
+    }
+}
