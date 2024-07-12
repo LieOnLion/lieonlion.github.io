@@ -93,13 +93,14 @@ body > * {
     flex-direction: column;
 }
 
-.btn-filled {
+button {
     padding: 15px;
     border-radius: 10px;
+    gap: 15px;
+    align-items: center;
+} .btn-filled {
     background-color: var(--colour-primary-500);
 } .btn-outline {
-    padding: 15px;
-    border-radius: 10px;
     background-color: #5c27ce20;
     border: 3px solid var(--colour-primary-500);
     backdrop-filter: blur(20px);
@@ -108,6 +109,23 @@ body > * {
 img {
     height: 100%;
     width: 100%;
+}
+
+.header {
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 15px;
+    background-color: #0f0f0f75;
+    backdrop-filter: blur(20px);
+    border-bottom: var(--border);
+    box-shadow: 0 4px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.header-nav {
+    gap: 30px;
 }
 
 .hero {
@@ -216,10 +234,24 @@ img {
 @media (width <= 450px) {
     :root {
         --page-side-padding: 15px;
+
+        --btn: bold 12px/15px var(--ff);
     }
 
     .footer-row {
         flex-direction: column;
+        gap: 15px;
+    }
+    
+    .header {
+        --h4: bold 20px/25px var(--ff);
+        --h5: bold 12px/15px var(--ff);
+    }
+    .header-nav {
+        gap: 15px;
+    }
+    
+    .hero-buttons {
         gap: 15px;
     }
 }
