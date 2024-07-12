@@ -158,11 +158,12 @@ img {
     padding-block: 30px;
     gap: 30px;
     background-color: var(--colour-background-500);
-    border: var(--border);
+    border-top: var(--border);
 }
 
 .footer-row {
     justify-content: space-between;
+    align-items: center;
     width: 100%;
 }
 
