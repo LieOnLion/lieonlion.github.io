@@ -92,6 +92,8 @@ body > * {
 } .flex-column {
     display: flex;
     flex-direction: column;
+} .fill-height {
+    height: 100%;
 }
 
 button {
@@ -162,16 +164,87 @@ img {
     position: absolute;
 }
 
+.cards-hero {
+    margin-block: 50px;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 315px);
+}
+
+.card-hover {
+    perspective: 1500px;
+}
+
 .card {
+    aspect-ratio: 63 / 88;
     width: 315px;
-    height: 440px;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+    filter: drop-shadow(20px 30px 4px var(--colour-background-500));
 }
 
 .card-front, .card-back {
-    border-radius: 30px;
+    backface-visibility: hidden;
+    position: absolute;
+    border-radius: 25px;
     height: 100%;
     width: 100%;
     overflow: hidden;
+    transform-style: preserve-3d;
+}
+
+.card-front {
+    background-color: var(--colour-primary-800);
+    border: solid var(--colour-primary-900) 15px;
+    align-items: center;
+    gap: 25px;
+}
+
+.card-front, .card-front * {
+    backface-visibility: hidden;
+    z-index: 2;
+}
+
+.card-front-box {
+    background-color: rgb(from var(--colour-background-200) r g b / 0.75);
+    border: solid var(--colour-background-100) 1px;
+    border-radius: 10px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+} .card-front-box-padding {
+    padding: 5px 10px;
+} .card-front-innerbox {
+    width: calc(100% + 2px);
+    margin: -1px;
+    background-color: transparent;
+    justify-content: space-between;
+}
+
+.card-front-links{
+    gap: 10px;
+} .card-front-links svg {
+    height: 24px;
+    width: 24px;
+}
+
+.card .btn-filled {
+    padding: 5px 10px;
+    gap: 5px;
+}
+
+.card-front-image {
+    aspect-ratio: 1 / 1;
+    width: 140px;
+    background-image: url("https://cdn.modrinth.com/data/HKKqmr2p/663d27b2efc202200ff2270f4edee28eaa3bfa04.gif");
+    background-size: cover;
+    border: solid var(--colour-primary-600) 2px;
+    border-radius: 10px;
 }
 
 .card-back {
@@ -179,7 +252,9 @@ img {
     border: solid var(--colour-primary-900) 15px;
     align-items: center;
     justify-content: center;
-    position: relative;
+    /* position: relative; */
+    transform: rotateY(180deg);
+    z-index: 1;
 } .card-back-logo {
     height: 205px;
     width: 205px;
@@ -309,3 +384,14 @@ img {
         gap: 15px;
     }
 }
+
+/* .slide-in {
+    transform: rotateY(180deg) rotateZ(-180deg);
+    animation: In 3s ease forwards;
+}
+
+@keyframes In {
+    100% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    } 
+} */
