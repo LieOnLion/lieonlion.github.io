@@ -183,6 +183,8 @@ img {
     border-radius: 25px;
     background-color: var(--colour-primary-800);
     border: solid var(--colour-primary-900) 15px;
+} .card h5 {
+    color: var(--colour-text-500);
 }
 
 .card-box {
@@ -217,7 +219,7 @@ img {
 .card-image {
     height: 140px;
     width: 140px;
-    background-image: url("https://cdn.modrinth.com/data/HKKqmr2p/663d27b2efc202200ff2270f4edee28eaa3bfa04.gif");
+    background-image: var(--image);
     background-size: cover;
     border: solid var(--colour-primary-600) 2px;
     border-radius: 10px;
