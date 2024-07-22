@@ -9,11 +9,11 @@
     --colour-background-100: #2e2e2e;
 
     /* primary colours */
+    --colour-primary-900: #080311;
+    --colour-primary-800: #0F0622;
+    --colour-primary-700: #140A37;
+    --colour-primary-600: #1c0d42;
     --colour-primary-500: #5c27ce;
-    /* --colour-primary-400: #0F0F0F; */
-    /* --colour-primary-300: #1E1E1E; */
-    /* --colour-primary-200: #1E1E1E; */
-    /* --colour-primary-100: #0B0B0B; */
 
     /* text colours */
     --colour-text-500: #ffffff;
@@ -78,6 +78,7 @@ h1 {
 
 body {
     background-color: var(--colour-background-400);
+    justify-content: space-between;
     width: 100dvw;
     min-height: 100dvh;
 }
@@ -161,6 +162,60 @@ img {
     position: absolute;
 }
 
+.card {
+    width: 315px;
+    height: 440px;
+}
+
+.card-front, .card-back {
+    border-radius: 30px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.card-back {
+    background-color: var(--colour-primary-800);
+    border: solid var(--colour-primary-900) 15px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+} .card-back-logo {
+    height: 205px;
+    width: 205px;
+    z-index: 1;
+} .card-back-logo use {
+    stroke: var(--colour-primary-800);
+    stroke-width: 10px;
+    stroke-linejoin: round;
+    paint-order: stroke;
+    fill: var(--colour-primary-500);
+    transform: scale(1.8) translate(7px, 7px);
+}
+
+.card-back-style {
+    position: absolute;
+    height: 240px;
+    width: 240px;
+} .card-back-style use {
+    fill: var(--colour-primary-900);
+    transform: scale(2.4);
+}
+
+.card-back-style.one {
+    left: -75px;
+    top: -45px;
+} .card-back-style.two {
+    right: -105px;
+    top: -15px;
+} .card-back-style.three {
+    left: -75px;
+    bottom: -15px;
+} .card-back-style.four {
+    right: -105px;
+    bottom: -45px;
+}
+
 .footer {
     padding-block: 30px;
     gap: 30px;
@@ -221,11 +276,7 @@ img {
         --page-side-padding: 30px;
     }
 }
-@media (orientation: portrait) {
-    /* :root{
-
-    } */
-    
+@media (orientation: portrait) {    
     .image-container {
         width: 120%;
         right: -25%;
