@@ -29,8 +29,8 @@ async function idk () {
     console.log(dls)
     for (let i = 0; i < dls.length; i++) {
         let ids = dls[i].id.split("-");
-        cfdl = await getCurseforgeData(ids[0]).then(data => data.data.downloadCount);
-        mddl = await getModrinthData(ids[1]).then(data => data.downloads);
+        cfdl = await getCurseforgeData(ids[0]).then(data => data.data.downloadCount).catch(data => 0);
+        mddl = await getModrinthData(ids[1]).then(data => data.downloads).catch(data => 0);
         total = cfdl + mddl;
 
         length = Math.floor((total.toString().length - 1) / 3) * 3;

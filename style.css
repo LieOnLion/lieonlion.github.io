@@ -78,7 +78,6 @@ h1 {
 
 body {
     background-color: var(--colour-background-400);
-    justify-content: space-between;
     width: 100dvw;
     min-height: 100dvh;
 }
@@ -174,11 +173,11 @@ img {
     grid-template-columns: repeat(auto-fit, 315px);
 }
 
-.card {
+.card, .card-back {
     width: 315px;
     aspect-ratio: 63 / 88;
     align-items: center;
-    gap: 25px;
+    gap: 15px;
     filter: drop-shadow(20px 30px 4px var(--colour-background-500));
     border-radius: 25px;
     background-color: var(--colour-primary-800);
@@ -217,12 +216,57 @@ img {
 }
 
 .card-image {
-    height: 140px;
-    width: 140px;
+    height: 160px;
+    width: 160px;
     background-image: var(--image);
     background-size: cover;
     border: solid var(--colour-primary-600) 2px;
     border-radius: 10px;
+}
+
+.card-back {
+    background-color: var(--colour-primary-800);
+    border: solid var(--colour-primary-900) 15px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-back-logo {
+    height: 205px;
+    width: 205px;
+    z-index: 1;
+} .card-back-logo use {
+    stroke: var(--colour-primary-800);
+    stroke-width: 10px;
+    stroke-linejoin: round;
+    paint-order: stroke;
+    fill: var(--colour-primary-500);
+    transform: scale(1.8) translate(7px, 7px);
+}
+
+.card-back-pattern * {
+    position: absolute;
+    height: 240px;
+    width: 240px;
+} .card-back-pattern use {
+    fill: var(--colour-primary-900);
+    transform: scale(2.4);
+}
+
+.card-back-pattern .one {
+    left: -75px;
+    top: -45px;
+} .card-back-pattern .two {
+    right: -105px;
+    top: -15px;
+} .card-back-pattern .three {
+    left: -75px;
+    bottom: -15px;
+} .card-back-pattern .four {
+    right: -105px;
+    bottom: -45px;
 }
 
 .footer {
@@ -230,6 +274,7 @@ img {
     gap: 30px;
     background-color: var(--colour-background-500);
     border-top: var(--border);
+    margin-top: auto;
 }
 
 .footer-row {
