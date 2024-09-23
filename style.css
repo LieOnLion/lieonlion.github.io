@@ -216,6 +216,7 @@ img {
     font: var(--btn-sml);
     padding: 5px 10px;
     gap: 5px;
+    backdrop-filter: blur(0);
 }
 
 .card-image {
