@@ -27,11 +27,12 @@
     --h1: bold 64px/75px var(--ff);
     --h2: bold 48px/60px var(--ff);
     --h3: bold 36px/45px var(--ff);
-    --h4: bold 24px/30px var(--ff);
+    --h4: bold 20px/25px var(--ff);
     --h5: bold 16px/20px var(--ff);
-    --lp: 24px/30px var(--ff);
+    --lp: 20px/25px var(--ff);
     --p: 16px/20px var(--ff);
-    --btn: bold 18px/24px var(--ff);
+    --btn: bold 16px/20px var(--ff);
+    --btn-sml: bold 14px/17.5px var(--ff);
 
     /* other stuff */
     --border: 1px var(--colour-background-300) solid;
@@ -96,7 +97,7 @@ body > * {
 }
 
 button {
-    padding: 15px;
+    padding: 15px 25px;
     border-radius: 10px;
     gap: 15px;
     align-items: center;
@@ -104,6 +105,7 @@ button {
     background-color: var(--colour-primary-500);
 } .btn-outline {
     background-color: #5c27ce20;
+    color: var(--colour-text-400);
     border: 3px solid var(--colour-primary-500);
     backdrop-filter: blur(20px);
 }
@@ -210,7 +212,8 @@ img {
     width: 24px;
 }
 
-.card .btn-filled {
+.card .btn-outline {
+    font: var(--btn-sml);
     padding: 5px 10px;
     gap: 5px;
 }
