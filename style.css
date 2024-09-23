@@ -335,6 +335,10 @@ img {
     }
 }
 @media (orientation: portrait) {    
+    button {
+        padding: 12.5px 15px;
+    }
+    
     .image-container {
         width: 120%;
         right: -25%;
