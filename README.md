@@ -10,4 +10,4 @@ Simple website for me built in React. Nothing more to it :&#41;
 
 ### Licence
 
-This project is licenced under the MIT Licence, Copyright (c) 2024 ***LieOnLion*** - see the full [LICENCE](https://github.com/LieOnLion/lieonlion.github.io/blob/site-v3/LICENSE)
+This project is licenced under the MIT Licence, Copyright (c) 2024 ***LieOnLion*** - see the full [LICENCE](https://github.com/LieOnLion/lieonlion.github.io/blob/main/LICENSE)
