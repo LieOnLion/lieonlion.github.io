@@ -26,12 +26,12 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <div className="h-px px-6 bg-gradient-to-r-line"></div>
+      <div className='h-px px-6 bg-gradient-to-r-line'></div>
       <div className='flex flex-row max-sm:flex-col max-sm:gap-12 justify-between w-full'>
-        <div class="w-full flex flex-col gap-8">
-          <div class="flex flex-col gap-2">
+        <div className='w-full flex flex-col gap-8'>
+          <div className='flex flex-col gap-2'>
             <p className='font-bold'>Pages</p>
-            <div class="footer-links-list flex flex-col">
+            <div className='footer-links-list flex flex-col'>
               <Link to='/'>Home</Link>
               <Link to='/projects'>Projects</Link>
               <Link to='/about-me'>About me</Link>
@@ -40,10 +40,10 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div class="w-full flex flex-col gap-8">
-          <div class="flex flex-col gap-2">
+        <div className='w-full flex flex-col gap-8'>
+          <div className='flex flex-col gap-2'>
             <p className='font-bold'>Projects</p>
-            <div class="footer-links-list flex flex-col">
+            <div className='footer-links-list flex flex-col'>
               <Link to='/project/more-chest-variants'>More Chest Variants</Link>
               <Link to='/project/quad'>Quad</Link>
               <Link to='/project/enderite'>Enderite</Link>
@@ -51,23 +51,23 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div class="w-full flex flex-col gap-8">
-          <div class="flex flex-col gap-2">
+        <div className='w-full flex flex-col gap-8'>
+          <div className='flex flex-col gap-2'>
             <p className='font-bold'>Contact Me</p>
-            <div class="footer-links-list flex flex-col">
+            <div className='footer-links-list flex flex-col'>
               <a href="mailto:lieonlion4@gmail.com">lieonlion4@gmail.com</a>
               <a href="https://discord.gg/sA42pp6cuX">discord.gg/sA42pp6cuX</a>
             </div>
           </div>
-          <div class="flex flex-col gap-2">
+          <div className='flex flex-col gap-2'>
             <p className='font-bold'>My Other Sites</p>
-            <div class="footer-links-list flex flex-col">
+            <div className='footer-links-list flex flex-col'>
               <a href="https://lieonstudios.github.io/">lieonstudios.github.io</a>
             </div>
           </div>
         </div>
       </div>
-      <div className="h-px px-6 bg-gradient-to-r-line"></div>
+      <div className='h-px px-6 bg-gradient-to-r-line'></div>
       <div className='flex flex-row max-sm:flex-col max-sm:gap-4 justify-between items-center w-full'>
         <p>LieOn Studios &copy; 2024 LieOnLion</p>
         <p>Site designer and developer, LieOnLion</p>

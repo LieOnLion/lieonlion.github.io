@@ -13,7 +13,11 @@ export default {
             200: '',
             300: '',
             400: '',
-            500: '#5c27ce'
+            500: '#5c27ce',
+            600: '#1c0d42',
+            700: '',
+            800: '#0F0622',
+            900: '#080311'
           },
           text: {
             100: '',
@@ -33,7 +37,13 @@ export default {
       },
       boxShadow: {
         'nav': '0 4px rgba(0, 0, 0, 0.4)',
-      }
+      },
+      borderWidth: {
+        '16': '16px',
+      },
+      gridTemplateColumns: {
+        'auto-fill-80': 'repeat(auto-fill, minmax(20rem, 1fr))'
+      },
     },
   },
   plugins: [],

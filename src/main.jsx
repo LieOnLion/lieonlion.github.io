@@ -6,8 +6,11 @@ import './index.css'
 
 // Pages
 import Home from './pages/Home.jsx'
+import Projects from './pages/Projects.jsx'
+
+// Extra Pages
 import NotFound from './pages/NotFound.jsx'
-import UnderConstruction from './pages/UnderConstruction.jsx' 
+import UnderConstruction from './pages/UnderConstruction.jsx'
 
 // Components
 import Nav from './components/Nav.jsx'
@@ -20,7 +23,7 @@ createRoot(document.getElementById('root')).render(
       <div className="px-page max-sm:px-page relative overflow-hidden">
         <Routes>
           <Route exact path='/' element={<Home />}/>
-          <Route path='/projects' element={<UnderConstruction />}/>
+          <Route path='/projects' element={<Projects />}/>
           <Route path='/project/:id' element={<UnderConstruction />}/>
           <Route path='/about-me' element={<UnderConstruction />}/>
           <Route path='/donate' element={<UnderConstruction />}/>

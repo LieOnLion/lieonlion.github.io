@@ -10,7 +10,7 @@ function Home() {
             <h4 className='text-2xl font-bold'>Solo Mod Dev</h4>
             <h1 className='text-7xl font-bold text-colour-text-500'>LieOnLion</h1>
           </div>
-          <p className='text-xl'>I'm a solo Mod Developer for the game Minecraft. My mods have generated over 2.0 million downloads across a number of platforms.</p>
+          <p className='text-xl'>I'm a solo Mod Developer for the game Minecraft. My mods have generated over 2.1 million downloads across a number of platforms.</p>
         </div>
         <div className='flex gap-4 sm:gap-6'>
           <Link to='/projects' 
