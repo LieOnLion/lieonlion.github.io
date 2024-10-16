@@ -20,7 +20,7 @@ createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>
       <Nav />
-      <div className="px-page max-sm:px-page relative overflow-hidden max-w-svw">
+      <div className="px-page max-sm:px-page relative overflow-hidden">
         <Routes>
           <Route exact path='/' element={<Home />}/>
           <Route path='/projects' element={<Projects />}/>
