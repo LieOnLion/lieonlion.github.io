@@ -41,6 +41,10 @@
   --page-side-padding: calc((100dvw - 1100px) / 2);
 }
 
+.max-w-svw {
+  max-width: 100svw;
+}
+
 .h-svh-no-nav {
   height: calc(100svh - 3.5rem);
 }
