@@ -1,21 +1,10 @@
-import { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import useCheckMobileScreen from '../hooks/useCheckMobileScreen';
 
 const Nav = () => {
-  const [isMobile, setIsMobile] = useState(false)
- 
-  //choose the screen size 
-  const handleResize = () => {
-    if (window.innerWidth < 640) {
-        setIsMobile(true)
-    } else {
-        setIsMobile(false)
-    }
-  }
+  const isMobile = useCheckMobileScreen();
 
-  useEffect(() => {
-    window.addEventListener("resize", handleResize)
-  })
+  console.log(isMobile);
 
   return (
     <nav className='flex justify-between items-center sticky top-0 z-10 px-page max-sm:px-page h-14 shadow-nav backdrop-blur-lg bg-colour-bg-500 bg-opacity-75 border-b border-colour-bg-300 text-colour-text-400'>
