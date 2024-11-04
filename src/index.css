@@ -53,7 +53,7 @@
   padding-inline: clamp(2rem, calc((100dvw - 1100px) / 2), 100vw);
 }
 
-.home-hero-bg-pan {
+.hero-bg-pan {
   animation: background-pan 8s linear infinite;
 }
 

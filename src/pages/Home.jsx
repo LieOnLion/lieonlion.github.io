@@ -26,8 +26,8 @@ const Home = () => {
     <>
       <div 
         id='heroBackground' 
-        className='absolute top-0 left-[-1px] h-full w-[calc(100%+3px)] -z-10 justify-center
-          grid grid-rows-[repeat(var(--tile-rows),_1fr)] grid-cols-[repeat(var(--tile-cols),_1fr)] home-hero-bg-pan
+        className='absolute top-0 left-0 h-[calc(100%+2px)] w-[calc(100%+2px)] -z-10 justify-center
+          grid grid-rows-[repeat(var(--tile-rows),_1fr)] grid-cols-[repeat(var(--tile-cols),_1fr)] hero-bg-pan
           bg-gradient-to-r gradient from-colour-primary-600 via-colour-primary-500 to-colour-primary-600 bg-[size:200%] bg-opacity-5'
       >
         {Array.from(Array(tileCount)).map((index) => {
@@ -37,7 +37,7 @@ const Home = () => {
         })}
       </div>
       <div className='flex items-center h-svh-no-nav'>
-        <div className='flex flex-col max-w-2xl sm:p-6 gap-6 text-colour-text-400 sm:bg-black sm:bg-opacity-25 rounded-xl sm:backdrop-blur-sm'>
+        <div className='flex flex-col max-w-2xl sm:p-6 gap-6 text-colour-text-400 sm:bg-black sm:bg-opacity-25 sm:rounded-xl sm:backdrop-blur-sm sm:border-colour-primary-600 sm:border-2 sm:border-opacity-75'>
           <div className='flex flex-col gap-3'>
             <div className='flex flex-col'>
               <h4 className='text-2xl font-bold'>Solo Mod Dev</h4>
