@@ -26,13 +26,13 @@ const Home = () => {
     <>
       <div 
         id='heroBackground' 
-        className='absolute top-0 left-0 h-full w-full -z-10
+        className='absolute top-0 left-[-1px] h-full w-[calc(100%+3px)] -z-10 justify-center
           grid grid-rows-[repeat(var(--tile-rows),_1fr)] grid-cols-[repeat(var(--tile-cols),_1fr)] home-hero-bg-pan
           bg-gradient-to-r gradient from-colour-primary-600 via-colour-primary-500 to-colour-primary-600 bg-[size:200%] bg-opacity-5'
       >
         {Array.from(Array(tileCount)).map((index) => {
           return (
-            <div className='bg-colour-bg-400 w-[calc(100%_-_2px)] h-[calc(100%_-_2px)]' key={index}></div>
+            <div className='bg-colour-bg-400 w-[calc(100%-2px)] h-[calc(100%-2px)]' key={index}></div>
           );
         })}
       </div>
