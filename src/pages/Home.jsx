@@ -57,7 +57,7 @@ const Home = () => {
           </div>
         </div>
         <div className='home-hero-img-wrapper w-70p h-auto absolute blur-md max-sm:home-hero-img-wrapper max-sm:w-120p'>
-          <img src="/assets/v1/logo/svg/lieonlion_outline.svg" alt="lieonlion-logo" className='w-full' />
+          <img src="/assets/v1/logo/svg/lieonlion.svg" alt="lieonlion-logo" className='w-full' />
         </div>
       </div>
     </>
