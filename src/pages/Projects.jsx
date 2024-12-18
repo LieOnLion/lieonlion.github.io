@@ -22,7 +22,7 @@ const Projects = () => {
 				}, []);
 
 				return (
-					<div className='flex flex-col w-80 card items-center gap-4 rounded-3xl border-16 bg-colour-primary-800 text-colour-text-400 border-colour-primary-900' key={mod.id}>
+					<div className='flex flex-col w-80 card items-center gap-4 rounded-3xl border-16 bg-colour-primary-800 text-colour-text-400 border-colour-primary-900' key={mod.modrinthId}>
 						<div className='flex justify-between items-center p-2 w-full border rounded-lg bg-colour-bg-200 bg-opacity-50 border-colour-bg-100'>
 							<h5 className='font-bold'>{mod.name}</h5>
 							<div className='flex gap-3'>
