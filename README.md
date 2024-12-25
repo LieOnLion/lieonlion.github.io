@@ -1,11 +1,11 @@
-# LieOnLion the Website
+# LieOnLion, the Website
 
-Simple website for me built in React. Nothing more to it :&#41;
+Simple website for me built in SolidJS. Nothing more to it :&#41;
 
 ## Development Tools Used
 [![github](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/compact-minimal/available/github_vector.svg)](https://github.com/)
 [![vite](https://lieonstudios.github.io/assets/v1/badge/compact-minimal/svg/vite.svg)](https://vite.dev/)
-[![react](https://lieonstudios.github.io/assets/v1/badge/compact-minimal/svg/react.svg)](https://react.dev/)
+[![react](https://lieonstudios.github.io/assets/v1/badge/compact-minimal/svg/react.svg)](https://solidjs.com/)
 [![tailwind](https://lieonstudios.github.io/assets/v1/badge/compact-minimal/svg/tailwind.svg)](https://tailwindcss.com/)
 
 ### Licence

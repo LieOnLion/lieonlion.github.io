@@ -2,37 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/assets/v1/logo/svg/lieonlion.svg" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LieOnLion</title>
-
-    <meta name="title" content="LieOnLion">
-    <meta name="description" content="Website of the Minecraft Mod Developer LieOnLion">
-    <meta name="theme-color" content="#5C27CE">
-    <meta property="og:site_name" content="LieOnLion">
-    <meta property="og:image" content="https://lieonlion.github.io/assets/v1/logo/png/lieonlion-512.png">
-    <meta property="og:type" content="object">
-    <meta property="og:url" content="https://lieonlion.github.io/">
-    <meta name="keywords" content="LieOnLion">
-    <meta name="author" content="LieOnLion">
-
-    <script type="text/javascript">
-      (function (l) {
-        if (l.search[1] === "/") {
-          var decoded = l.search
-            .slice(1)
-            .split("&")
-            .map(function (s) {
-              return s.replace(/~and~/g, "&");
-            })
-            .join("?");
-          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
-        }
-      })(window.location);
-    </script>
+    <title>Vite + Solid</title>
   </head>
-  <body class="bg-colour-bg-400">
-    <div id="root" class="min-h-svh min-w-svw flex flex-col"></div>
-    <script type="module" src="/src/main.jsx"></script>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/index.jsx"></script>
   </body>
 </html>
