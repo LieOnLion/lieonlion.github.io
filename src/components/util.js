@@ -1,18 +1,18 @@
-export const gcn = (styles, selectedVariants) => {
-  const keys = Object.keys(styles.variants);
+export const gcn = (options, styles) => {
+  const keys = Object.keys(options.variants);
   let variantClassNames = "";
 
   keys.forEach(key => {
-    const selected = selectedVariants[key];
-    const selectedValue = styles.variants[key][selected];
+    const selected = styles[key];
+    const selectedValue = options.variants[key][selected];
     if (selected && selectedValue) {
       variantClassNames += wsats(selectedValue);
     } else {
-      variantClassNames += wsats(styles.variants[key][styles.default[key]]);
+      variantClassNames += wsats(options.variants[key][options.default[key]]);
     }
   });
 
-  return(styles.base + variantClassNames);
+  return(options.base + variantClassNames);
 }
 
 export const wsats = (string) => {

@@ -1,7 +1,8 @@
+import { Dynamic } from "solid-js/web";
 import { A } from "@solidjs/router";
 import { gcn } from "../util";
 
-const styles = {
+const options = {
   base: "inline-flex justify-center cursor-pointer font-bold text-slate-100",
   variants: {
     variant: {
@@ -26,11 +27,15 @@ const styles = {
   }
 }
 
-const Button = ({ link = "/", variant, size, uppercase, children }) => {
+const Button = ({ styles = {}, children, ...props }) => {
+  const component = props.href ? A : "button"
+
   return (
-    <A href={link} className={gcn(styles, {variant, size, uppercase})}>
-      {children}
-    </A>
+    <>
+      <Dynamic component={component} className={gcn(options, styles)} {...props}>
+        {children}
+      </Dynamic>
+    </>
   )
 }
 
