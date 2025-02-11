@@ -1,120 +1,126 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Barlow", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Barlow", sans-serif;
 }
 
 :root {
-  /* background colours */
-  --colour-bg-500: #0b0b0b;
-  --colour-bg-400: #0f0f0f;
-  --colour-bg-300: #1e1e1e;
-  --colour-bg-200: #212121;
-  --colour-bg-100: #2e2e2e;
+	/* background colours */
+	--colour-bg-500: #0b0b0b;
+	--colour-bg-400: #0f0f0f;
+	--colour-bg-300: #1e1e1e;
+	--colour-bg-200: #212121;
+	--colour-bg-100: #2e2e2e;
 
-  /* primary colours */
-  --colour-primary-900: #080311;
-  --colour-primary-800: #0F0622;
-  --colour-primary-700: #140A37;
-  --colour-primary-600: #1c0d42;
+	/* primary colours */
+	--colour-primary-900: #080311;
+	--colour-primary-800: #0f0622;
+	--colour-primary-700: #140a37;
+	--colour-primary-600: #1c0d42;
 
-  /* font stuff */
-  --ff: "Barlow", sans-serif;
-  --h1: bold 64px/75px var(--ff);
-  --h2: bold 48px/60px var(--ff);
-  --h3: bold 36px/45px var(--ff);
-  --h4: bold 20px/25px var(--ff);
-  --h5: bold 16px/20px var(--ff);
-  --lp: 20px/25px var(--ff);
-  --p: 16px/20px var(--ff);
-  --btn: bold 16px/20px var(--ff);
-  --btn-sml: bold 14px/17.5px var(--ff);
+	/* font stuff */
+	--ff: "Barlow", sans-serif;
+	--h1: bold 64px/75px var(--ff);
+	--h2: bold 48px/60px var(--ff);
+	--h3: bold 36px/45px var(--ff);
+	--h4: bold 20px/25px var(--ff);
+	--h5: bold 16px/20px var(--ff);
+	--lp: 20px/25px var(--ff);
+	--p: 16px/20px var(--ff);
+	--btn: bold 16px/20px var(--ff);
+	--btn-sml: bold 14px/17.5px var(--ff);
 
-  /* other stuff */
-  --page-side-padding: calc((100dvw - 1100px) / 2);
+	/* other stuff */
+	--page-side-padding: calc((100dvw - 1100px) / 2);
 }
 
 .max-w-svw {
-  max-width: 100svw;
+	max-width: 100svw;
 }
 
 .h-svh-no-nav {
-  height: calc(100svh - 3.5rem);
+	height: calc(100svh - 3.5rem);
 }
 
 .px-page {
-  padding-inline: clamp(2rem, calc((100dvw - 1100px) / 2), 100vw);
+	padding-inline: clamp(2rem, calc((100dvw - 1100px) / 2), 100vw);
 }
 
 .hero-bg-pan {
-  animation: background-pan 8s linear infinite;
+	animation: background-pan 8s linear infinite;
 }
 
 .home-hero-img-wrapper {
-  transform: rotateY(20deg) rotateZ(-15deg) rotateX(25deg);
-  right: -10%;
-  z-index: -1;
+	transform: rotateY(20deg) rotateZ(-15deg) rotateX(25deg);
+	right: -10%;
+	z-index: -1;
 }
 
 .home-hero-img-gradient {
-  background-image: radial-gradient(transparent 67%, var(--colour-bg-400) 71%);
+	background-image: radial-gradient(transparent 67%, var(--colour-bg-400) 71%);
 }
 
 .w-70p {
-  width: 70%;
+	width: 70%;
 }
 
 .scale-24 {
-  transform: scale(0.24);
+	transform: scale(0.24);
 }
 
 .scale-32 {
-  transform: scale(0.32);
+	transform: scale(0.32);
 }
 
 .bg-gradient-to-r-line {
-  background-image: linear-gradient(to left, transparent 0%, var(--colour-bg-300) 10%, var(--colour-bg-300) 90%, transparent 100%);
+	background-image: linear-gradient(
+		to left,
+		transparent 0%,
+		var(--colour-bg-300) 10%,
+		var(--colour-bg-300) 90%,
+		transparent 100%
+	);
 }
 
 .card {
-  aspect-ratio: 63 / 88;
+	aspect-ratio: 63 / 88;
 }
 
 .w-full-2 {
-  width: calc(100% + 2px);
+	width: calc(100% + 2px);
 }
 
 .-m-1px {
-  margin: -1px;
+	margin: -1px;
 }
 
 @media not all and (min-width: 640px) {
-  .max-sm\:px-page {
-    padding-inline: 1rem;
-  }
+	.max-sm\:px-page {
+		padding-inline: 1rem;
+	}
 
-  .max-sm\:home-hero-img-wrapper {
-    right: -25%;
-    z-index: -1;
-  }
-  
-  .max-sm\:w-120p {
-    width: 120%;
-  }
+	.max-sm\:home-hero-img-wrapper {
+		right: -25%;
+		z-index: -1;
+	}
+
+	.max-sm\:w-120p {
+		width: 120%;
+	}
 }
 
 @keyframes background-pan {
-  from {
-    background-position: 0% center;
-  }
-  to {
-    background-position: -200% center;
-  }
+	from {
+		background-position: 0% center;
+	}
+	to {
+		background-position: -200% center;
+	}
 }
